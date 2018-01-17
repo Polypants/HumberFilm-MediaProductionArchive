@@ -1,0 +1,28 @@
+.videoPlayer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.videoPlayer_close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  cursor: pointer;
+}
+.videoPlayer_close_line {
+  width: 80%;
+  height: 2.5px;
+  background-color: white;
+  margin: 9% auto;
+}
+.videoPlayer_close_line-1 {
+  margin-top: 45%;
+  transform: rotate(45deg) translateY(10px);
+}
+.videoPlayer_close_line-2 {
+  margin-top: 12px;
+  transform: rotate(-45deg) translateY(-10px);
+}

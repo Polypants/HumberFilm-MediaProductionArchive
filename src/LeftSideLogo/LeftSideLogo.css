@@ -1,0 +1,30 @@
+.leftSideLogo_background {
+  height: 100%;
+  width: 3%;
+  background-color: #FEDB00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 650px) {
+  .leftSideLogo_background {
+    width: 0;
+  }
+}
+
+/* logo */
+.leftSideLogo_logo {
+  position: absolute;
+  left: 3%;
+  top: 20px;
+}
+@media screen and (max-width: 650px) {
+  .leftSideLogo_logo {
+    left: 0;
+  }
+}
+.leftSideLogo_weare, .leftSideLogo_humber {
+  height: 30px;
+  display: block;
+}

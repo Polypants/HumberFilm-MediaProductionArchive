@@ -1,0 +1,37 @@
+.menuButton {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.menuButton_line {
+  width: 60%;
+  height: 2.5px;
+  background-color: white;
+  margin: 9% auto;
+  transition: all 0.3s;
+}
+.menuButton_line-1 {
+  margin-top: 17%;
+}
+.app--isMenuOpen .menuButton {
+  transform: rotate(180deg);
+  top: 15px;
+  right: 15px;
+}
+.app--isMenuOpen .menuButton_line {
+  width: 80%;
+}
+.app--isMenuOpen .menuButton_line-1 {
+  margin-top: 45%;
+  transform: rotate(45deg) translateY(10px);
+}
+.app--isMenuOpen .menuButton_line-2 {
+  opacity: 0;
+}
+.app--isMenuOpen .menuButton_line-3 {
+  transform: rotate(-45deg) translateY(-10px);
+}

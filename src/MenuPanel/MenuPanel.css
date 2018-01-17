@@ -1,0 +1,89 @@
+/* container */
+.menuPanel {
+  position: absolute;
+  transform: translateX(100%);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.app--isMenuOpen .menuPanel {
+  transform: translate(0);
+}
+
+/* background */
+.menuPanel_background {
+  background-color: #009BE0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@media screen and (max-width: 700px) {
+  .menuPanel_background {
+    background-color: #009BE0;
+  }
+}
+
+/* logo */
+.menuPanel_logo {
+  opacity: 0;
+  position: absolute;
+  bottom: 80px;
+  right: -20px;
+  transform: rotate(-90deg);
+  transition: opacity 0.3s;
+}
+@media screen and (max-width: 700px) {
+  .menuPanel_logo {
+    bottom: 40px;
+  }
+}
+.menuPanel_weare, .menuPanel_humber {
+  height: 80px;
+  display: block;
+}
+@media screen and (max-width: 700px) {
+  .menuPanel_weare, .menuPanel_humber {
+    height: 40px;
+    display: block;
+  }
+}
+.app--isMenuOpen .menuPanel_logo {
+  opacity: 1;
+}
+
+/* share */
+.menuPanel_share {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+@media screen and (max-width: 700px) {
+  .menuPanel_share {
+    top: 0;
+    left: 0;
+    margin: 3vw 3%;
+  }
+}
+.app--isMenuOpen .menuPanel_share {
+  opacity: 1;
+}
+.menuPanel_share p {
+  margin: 5px;
+}
+.menuPanel_share_title {
+  opacity: 0.5;
+  font-size: 12px;
+  cursor: default;
+}
+.menuPanel_share_button {
+  font-size: 22px;
+  cursor: pointer;
+}

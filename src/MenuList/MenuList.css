@@ -1,0 +1,99 @@
+/* container */
+.menuList {
+  opacity: 0;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transition: opacity 0.5s;
+  transform: translate(-50%, -50%);
+}
+.menuList ul {
+  margin: 0;
+  padding: 0;
+}
+.app--isMenuOpen .menuList {
+  opacity: 1;
+}
+
+/* item */
+.menuList_item {
+  display: block;
+  line-height: 120px;
+  position: relative;
+  margin-left: 20%;
+}
+@media screen and (max-width: 900px) {
+  .menuList_item {
+    margin-left: 10%;
+    line-height: 70px;
+  }
+}
+.menuList_item a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  width: 0;
+  font-size: 80px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 900px) {
+  .menuList_item a {
+    font-size: 40px;
+  }
+}
+.menuList_item .line {
+  width: 0;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -10;
+  transition: all 0.3s;
+  transform: translateY(-12%);
+  background-color: #FEDB00;
+}
+@media screen and (max-width: 900px) {
+  .menuList_item .line {
+    height: 10px;
+  }
+}
+.menuList_item:hover .line {
+  width: 600px;
+  transform: translateY(-12%) translateX(-100px);
+}
+@media screen and (max-width: 900px) {
+  .menuList_item:hover .line {
+    width: 250px;
+    transform: translateY(-12%) translateX(-50px);
+  }
+}
+.menuList_item:hover a {
+  transform: translateX(100px);
+}
+@media screen and (max-width: 900px) {
+  .menuList_item:hover a {
+    transform: translateX(50px);
+  }
+}
+
+.menuList_item--active a {
+  transform: translateX(100px);
+}
+@media screen and (max-width: 900px) {
+  .menuList_item--active a {
+    transform: translateX(50px);
+  }
+}
+.menuList_item--active .line {
+  width: 600px;
+  transform: translateY(-12%) translateX(-100px);
+}
+@media screen and (max-width: 900px) {
+  .menuList_item--active .line {
+    width: 250px;
+    transform: translateY(-12%) translateX(-50px);
+  }
+}

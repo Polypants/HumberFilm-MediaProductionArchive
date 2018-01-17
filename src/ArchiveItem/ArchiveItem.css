@@ -1,0 +1,106 @@
+.archiveItem {
+  position: relative;
+  overflow: hidden;
+}
+
+.archiveItem_image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.3s;
+  overflow: hidden;
+}
+.archiveItem_imageOverlay {
+  opacity: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,1), transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: opacity 0.3s;
+}
+.archiveItem_image:hover .archiveItem_imageOverlay {
+  opacity: 1;
+}
+.archiveItem--selected .archiveItem_imageOverlay {
+  opacity: 0!important;
+}
+
+.archiveItem_title {
+  margin: 0;
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 25px;
+  text-align: right;
+  width: 90%;
+  transform: translateY(150%);
+  transition: transform 0.3s;
+  cursor:default;
+}
+.archiveItem:hover .archiveItem_title {
+  transform: translateY(0%);
+}
+.archiveItem--selected .archiveItem_title {
+  transform: translateY(150%)!important;
+}
+
+.archiveItem_playButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 60px;
+  width: 60px;
+  background-color: #5C068C;
+  border-radius: 50%;
+  transform: translateX(150%) rotate(179deg);
+  transition: transform 0.3s;
+}
+.archiveItem--selected .archiveItem_playButton {
+  transform: translateX(0%);
+  cursor: pointer;
+}
+.archiveItem_playButton_playIcon {
+  width: 32%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-40%, -50%);
+}
+
+.archiveItem_detailInfo {
+  color: white;
+  background-color: #5C068C;
+  transition: max-height 1s;
+  padding: 30px;
+}
+.archiveItem_detailInfo_content {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.archiveItem_detailInfo_label {
+  opacity: 0.3;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+.archiveItem_detailInfo_title {
+  margin-top: 0;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+}
+.archiveItem_detailInfo_synopsis {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  margin-bottom: 0;
+}
+.archiveItem_detailInfo_description {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  margin-bottom: 0;
+}
